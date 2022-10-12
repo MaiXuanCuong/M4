@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  // thuộc tính
+  title:string = 'Xuân Cường';
+  age: number = 20;
+  imgUrl:string = 'https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg';
+ // phương thức 
+  calltitel(){
+    // alert(this.title);
+    
+    this.imgUrl = 'https://taimienphi.vn/tmp/cf/aut/anh-gai-xinh-1.jpg';
+  }
+  ageless(){
+    this.age--;
+  }
+  agemore(){
+    this.age++;
+  }
+}
+//app.component.ts
