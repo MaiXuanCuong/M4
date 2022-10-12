@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { Bai3Component } from './bai3/bai3.component';
 import { PetComponent } from './pet/pet.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PetComponent } from './pet/pet.component';
     HomeComponent,
     Bai3Component,
     PetComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
