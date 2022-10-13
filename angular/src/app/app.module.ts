@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { Bai3Component } from './bai3/bai3.component';
 import { PetComponent } from './pet/pet.component';
 import { ProductComponent } from './product/product.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ProductComponent } from './product/product.component';
     Bai3Component,
     PetComponent,
     ProductComponent,
+    PipeComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
