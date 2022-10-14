@@ -11,6 +11,7 @@ import { PetComponent } from './pet/pet.component';
 import { ProductComponent } from './product/product.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ArticleComponent } from './article/article.component';
+import { NameCardComponent } from './name-card/name-card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ArticleComponent } from './article/article.component';
     ProductComponent,
     PipeComponent,
     ArticleComponent,
+    NameCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,14 +6,23 @@
   <h1>{{ title}}</h1>
   <img [src]="imgUrl" [alt]="title" style="width:20% ; height:20% ;">
   <button (click)="calltitel()">click</button>
-  <input [(ngModel)]="title" type="text">
+  <input [(ngModel)]="title" type="text" title="Đây Là Tên"/>
+  <input [(ngModel)]="age" type="text" title="Đây Là Tên"/>
   <button (click)="ageless()">Giảm Tuổi</button>
-  <button (click)="agemore()">Tăng Tuổi</button> -->
+  <button (click)="agemore()">Tăng Tuổi</button>
+  <div *ngIf="age > 17; then age1 else age2"></div>
+ <div *ngIf="age <= 17">uong bia</div>
+<ng-template #age1>uong bia</ng-template>
+<ng-template #age2>uong ruou</ng-template> -->
+<!-- <div *ngFor="let hi of hay; let id = index">
+  <label >{{ id + 1 }}.{{ hi }}</label>
+</div> -->
 
   <!-- app.component.html -->
   <!-- <app-bai3></app-bai3>;
   <app-pet></app-pet>;
   <app-product></app-product>; -->
-  <!-- <app-pipe></app-pipe>;
-   -->
-   <app-article></app-article>
+  <!-- <app-pipe></app-pipe>; -->
+   
+   <!-- <app-article></app-article> -->
+   <app-name-card></app-name-card>
