@@ -26,5 +26,8 @@ export class AppComponent {
   agemore(){
     this.age++;
   }
+  handleChaClick(){
+    alert('handleChaClick');
+  }
 }
 //app.component.ts
