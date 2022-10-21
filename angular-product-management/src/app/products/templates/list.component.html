@@ -1,0 +1,36 @@
+    <div class="container">
+        <button type="button" style="margin-left: 80px;" [routerLink]="['add']" class="btn btn-success mt-3">
+            Thêm sản phẩm 
+        </button>
+  <table style="text-align: center;" class="table table-borderless table-striped">
+    <thead>
+        <tr >
+            <th style="width: 10%;">STT</th>
+            <th style="width: 20%;">Name</th>
+            <th style="width: 20%;">Price</th>
+            <th style="width: 20%;">Action</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let product of products; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-primary" [routerLink]="['/products',product.id]">
+                    Xem
+                </button>
+                <button class="btn btn-warning mx-2" [routerLink]="['/edit',product.id]">
+                    Sửa
+                </button>
+                <!-- <button class="btn btn-danger"  [routerLink]="['/delete',product.id]">
+                    Xóa   
+                </button> -->
+                  <button class="btn btn-danger"  (click)="deleteItem(product.id,product.name)">
+                    Xóa   
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>  
+</div>

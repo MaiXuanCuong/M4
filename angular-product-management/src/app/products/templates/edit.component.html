@@ -1,0 +1,21 @@
+<div class="container" style="width: 800px;">
+    <div class="row">
+      <div class="card-header">
+        <h1 class="text-center">Cập nhật sản phẩm</h1>
+      </div>
+      <form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="" class="form-label">Tên sản phẩm</label>
+          <input type="text" name="name" class="form-control" formControlName="name" />
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Giá</label>
+          <input type="text" name="price" class="form-control" formControlName="price" />
+        
+        </div>
+        
+        <button type="submit" [disabled]=""  class="btn btn-success">Lưu</button>
+        <button type="button" [routerLink]="['']" class="btn btn-secondary">Quay Lại</button>
+      </form>
+    </div>
+  </div>

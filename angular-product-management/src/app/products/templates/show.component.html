@@ -1,0 +1,15 @@
+<div class="container" style="width: 600px;">
+    <div class="row">
+      <div class="card-header">
+        <h1 class="card-title text-center ">Chi tiết sản phẩm</h1>
+        <div class="d-flex justify-content-end">
+          <button [routerLink]="['']" class="btn btn-primary " type="button">Xem danh sách</button>
+        </div>
+      </div>
+      <div *ngIf="products">
+        <p> Id: {{products.id}}</p>
+        <p> Tên sản phẩm : {{products.name}} </p>
+        <p> Giá: {{products.price}}</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,50 @@
+<div class="card-header">
+    <h1 class="text-center">Danh sách sản phẩm</h1>
+ </div>
+ <div class="container">
+   <div class="row">
+       <div class="col-md-4 mt-3 ">
+           <!-- <p style="display: inline">Có {{ count }} cuốn sách</p> -->
+       </div>
+       <div class="col-md-8 ">
+           <button type="button" style="margin-left: 464px;" [routerLink]="['add']" class="btn btn-success mt-3">
+               Thêm sản phẩm 
+           </button>
+       </div>
+   </div>
+   <div class="card-body">
+       <table class="table table-bordered">
+           <thead>
+               <tr>
+                   <th>#</th>
+                   <th>Tên sản phẩm</th>
+                   <th>Mô tả</th>
+                   <th>Giá</th>
+                   <th>Chức Năng</th>
+               </tr>
+           </thead>
+           <tbody>
+                <tr *ngFor="let product of products;let key = index">             
+                          
+                 <td>{{key+1}}</td>
+                 <td><a href="" [routerLink]="['show',product.id]">{{product.name}}</a></td>
+                 <td>{{product.description}}</td>
+                 <td>{{product.price}}</td>
+                   <td class="text-center">
+                       <button class="btn btn-primary" [routerLink]="['show',product.id]">
+                           Xem
+                       </button>
+                       <button class="btn btn-warning mx-2" [routerLink]="['edit',product.id]">
+                           Sửa
+                       </button>
+                       <button class="btn btn-danger"  [routerLink]="['delete',product.id]">
+                           Xóa   
+                       </button>
+                   </td>   
+               </tr>
+           </tbody>
+       </table>
+   </div>
+ </div>
+ 
+ 

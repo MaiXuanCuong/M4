@@ -1,0 +1,60 @@
+<!-- https://angular.io/guide/form-validation -->
+<div class="container">
+  <button type="button" [routerLink]="['']" class="btn btn-success mt-3">
+    Trở Về
+  </button>
+  <form
+    #formProduct="ngForm"
+    (ngSubmit)="handleSubmit(formProduct.value)"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        ngModel
+        #name="ngModel"
+        required
+        type="text"
+        class="form-control"
+        name="name"
+        placeholder="Name"
+      />
+      <p
+        *ngIf="name.invalid && (name.dirty || name.touched) && name.errors?.['required']"
+        class="help-block text-danger"
+      >
+        Name is required
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        ngModel
+        #price="ngModel"
+        required
+        minlength="3"
+        type="text"
+        class="form-control"
+        name="price"
+        placeholder="Price"
+      />
+      <p
+        *ngIf="name.invalid && (price.dirty || price.touched) && price.errors?.['required']"
+        class="help-block text-danger"
+      >
+        price is required
+      </p>
+
+    </div>
+    <br />
+    <div class="form-group" *ngIf="formProduct.valid">
+      <button
+        type="submit"
+        [disabled]="!formProduct.valid"
+        class="btn btn-primary"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

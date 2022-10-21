@@ -4,17 +4,21 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 
 const routes: Routes = [
+  // {
+  //   path: 'product/list',
+  //   component: ProductListComponent
+  // }, {
+  //   path: 'product/create',
+  //   component: ProductCreateComponent
+  // }
   {
-    path: 'product/list',
-    component: ProductListComponent
-  }, {
-    path: 'product/create',
-    component: ProductCreateComponent
+  path: 'products',
+    loadChildren: () => import('./products/products.module').then(module => module.ProductsModule)
   }
-  
 ];
 
 @NgModule({
+  declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
